@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>We love counting!</p>
+    <button id="countUpButton">CountUp</button>
+    <button id="countDownButton">CountDown</button>
+
+    <script>
+        let count = 0;
+        
+        function countUp() {
+            count = count + 1;
+            showAlert();
+        }
+        function countDown() {
+            count = count - 1;
+            showAlert();
+        }
+        function showAlert() {
+            let msg = `Count is ${count} now.`
+            alert(msg);
+        }
+
+        const buttonCountUp = document.getElementById('countUpButton');
+        const buttonCountDown = document.getElementById('countDownButton');
+        buttonCountUp.onclick = countUp;
+        buttonCountDown.onclick = countDown;
+    </script>
+</body>
+</html>
